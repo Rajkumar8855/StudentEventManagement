@@ -1,0 +1,61 @@
+cat > index.html <<'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Event Management System</h1>
+        <p>Discover, register, and manage college events</p>
+    </header>
+
+    <nav>
+        <a href="#events">Events</a>
+        <a href="#registration">Register</a>
+        <a href="#admin">Admin</a>
+    </nav>
+
+    <main>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div id="event-list"></div>
+        </section>
+
+        <section id="registration">
+            <h2>Student Registration</h2>
+            <form id="registration-form">
+                <input id="student-name" placeholder="Student name" required>
+                <input id="student-email" type="email"
+                       placeholder="Student email" required>
+                <input id="event-name" placeholder="Event name" required>
+                <button type="submit">Register Now</button>
+            </form>
+            <p id="registration-message"></p>
+        </section>
+
+        <section id="admin">
+            <h2>Admin: Add an Event</h2>
+            <form id="event-form">
+                <input id="new-event" placeholder="Event name" required>
+                <input id="event-date" type="date" required>
+                <input id="event-location" placeholder="Location" required>
+                <button type="submit">Add Event</button>
+            </form>
+            <p id="admin-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Event Management System | 2026</p>
+    </footer>
+
+    <script src="events.js"></script>
+    <script src="registration.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+EOF
